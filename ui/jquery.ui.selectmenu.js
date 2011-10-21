@@ -182,11 +182,11 @@ $.widget( "ui.selectmenu", {
 		}
 		
 		// transfer disabled state
-		if ( this.element.attr( 'disabled' ) ) {
-			this.disable();
-		} else {
-			this.enable()
-		}
+		if (this.element.attr('disabled') === true || this.element.attr('disabled') === 'disabled') {
+                	this.disable();
+            	} else {
+                	this.enable()
+            	}
 	},	
 	
 	open: function( event ) {		
